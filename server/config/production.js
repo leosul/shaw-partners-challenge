@@ -1,3 +1,5 @@
-module.exports = {
-    finalUrl: 'http://localhost:3001'
+export default {
+  integrations: {
+    baseUrl: 'https://api.github.com'
   }
+}

@@ -5,6 +5,18 @@ const getUsers = async (req, res) => {
     res.json(users)
 }
 
+const getUserByUserName = async (req, res) => {
+    const user = await userRepository.getUserByUserName(req.params.login)
+    res.json(user)
+}
+
+const getUserRepositories = async (req, res) => {
+    const repos = await userRepository.getUserRepositories(req.params.login)
+    res.json(repos)
+}
+
 export const userController = {
-    getUsers
+    getUsers,
+    getUserByUserName,
+    getUserRepositories
 }
