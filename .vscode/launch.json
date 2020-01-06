@@ -12,7 +12,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/server/loader.js"
+            "program": "${workspaceFolder}/server/bin/index.js",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
         }
     ]
 }
