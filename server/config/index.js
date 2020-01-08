@@ -13,8 +13,7 @@ switch (env) {
     throw new Error(`Invalid NODE_ENV value: ${env}`)
 }
 
-const c = Object.assign({}, config.default)
+const c = Object.assign({}, config)
 
-module.exports = {
-  c
-}
+module.exports = c
+

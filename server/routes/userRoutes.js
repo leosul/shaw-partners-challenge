@@ -1,7 +1,6 @@
-const express = require('express')
+const { Router } = require('express')
 const userController = require('./../controllers/userController')
-
-const router = new express.Router()
+const router = new Router()
 
 router.get('/', userController.getUsers)
 router.get('/link/:link', userController.getUsersLink)

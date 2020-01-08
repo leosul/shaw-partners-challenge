@@ -1,7 +1,7 @@
-const express = require('express')
+const { Router } = require('express')
 const userRouter = require('./userRoutes')
-
-const router = new express.Router()
+const router = new Router()
+const config = require('./../config')
 
 router.use('/api', router)
 

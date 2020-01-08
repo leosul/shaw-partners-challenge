@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Challenge - Shaw and Partners - Selective Process",
   "main": "server/loader.js",
-  "type": "module",
   "scripts": {
-    "server": "nodemon server/bin/index --exec babel-node",
+    "server": "nodemon server/bin/index",
     "start": "node server/bin/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "startui": "react-scripts start"
@@ -14,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime": "^7.3.1",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -31,12 +29,6 @@
     "react-scripts": "^3.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.3",
-    "@babel/node": "^7.2.2",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/register": "^7.0.0",
     "mocha": "^7.0.0",
     "nodemon": "^2.0.2"
   },

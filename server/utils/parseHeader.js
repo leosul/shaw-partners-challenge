@@ -4,6 +4,4 @@ const parseHeader = (link) => {
     return parse(link)
 }
 
-module.exports = {
-    parseHeader
-}
+module.exports = parseHeader

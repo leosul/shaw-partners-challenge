@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.use(routes)
 app.use(errorHandler)
 
-function errorHandler (err, req, res, next) {
+function errorHandler(err, req, res, next) {
   console.log('INTERNAL ERROR', err)
   res.status(500).json({ internal_server_error: err })
 }
