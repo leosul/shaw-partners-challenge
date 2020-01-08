@@ -4,7 +4,6 @@ import parse from '../utils/parseHeader'
 
 const getUsers = async () => {
     try {
-        //console.log(link)
         const users = await axios.get(config.integrations.baseUrl + `/users`)
 
         return {
@@ -18,7 +17,6 @@ const getUsers = async () => {
 }
 
 const getUsersLink = async (link) => {
-    console.log(config.integrations.baseUrl + '/users?' + link)
     try {
         const users = await axios.get(config.integrations.baseUrl + '/users?' + link)
 
@@ -46,9 +44,6 @@ const getUserByUserLogin = async (login) => {
 const getUserRepositories = async (login) => {
     try {
         const repo = await axios.get(config.integrations.baseUrl + `/users/${login}/repos`)
-
-        console.log(config.integrations.baseUrl + `/users/${login}/repos`)
-        //console.log('runQuery', repo, JSON.stringify(repo.data))
 
         return { repos: repo.data }
     } catch (error) {
