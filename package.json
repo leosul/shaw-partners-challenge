@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Challenge - Shaw and Partners - Selective Process",
   "main": "server/loader.js",
+  "type": "module",
   "scripts": {
     "server": "nodemon server/bin/index --exec babel-node",
     "start": "node server/bin/index.js",

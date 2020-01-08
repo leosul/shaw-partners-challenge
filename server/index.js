@@ -1,7 +1,7 @@
-import express from 'express'
-import bodyParser from 'body-parser'
-import cors from 'cors'
-import routes from './routes'
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const routes = require('./routes')
 
 const app = express()
 
@@ -15,4 +15,4 @@ function errorHandler (err, req, res, next) {
   res.status(500).json({ internal_server_error: err })
 }
 
-export default app
+module.exports = app

@@ -1,4 +1,4 @@
-import { userRepository } from '../repositories/userRepository'
+const userRepository = require('../repositories/userRepository')
 
 const getUsers = async (req, res) => {
     const users = await userRepository.getUsers()
@@ -20,7 +20,7 @@ const getUserRepositories = async (req, res) => {
     res.json(repos)
 }
 
-export const userController = {
+module.exports = {
     getUsers,
     getUserByUserLogin,
     getUserRepositories,

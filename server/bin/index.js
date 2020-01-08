@@ -1,4 +1,4 @@
-import app from './../index'
+const app = require('./../index')
 
 app.set('port', process.env.PORT || 3001)
 

@@ -1,6 +1,6 @@
-import axios from 'axios'
-import config from './../config'
-import parse from '../utils/parseHeader'
+const axios = require('axios')
+const config = require('./../config')
+const parse = require('../utils/parseHeader')
 
 const getUsers = async () => {
     try {
@@ -52,7 +52,7 @@ const getUserRepositories = async (login) => {
     }
 }
 
-export const userRepository = {
+module.exports = {
     getUsers,
     getUserByUserLogin,
     getUserRepositories,

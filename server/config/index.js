@@ -15,4 +15,6 @@ switch (env) {
 
 const c = Object.assign({}, config.default)
 
-export default c
+module.exports = {
+  c
+}
