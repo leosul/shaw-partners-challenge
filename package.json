@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon server/bin/index --exec babel-node",
     "start": "node server/bin/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startui": "react-scripts start"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +17,16 @@
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "create-react-app": "^3.3.0",
     "express": "^4.17.1",
     "mongoose": "^5.8.4",
     "node-restful": "^0.2.6",
-    "pm2": "^4.2.1"
+    "parse-link-header": "^1.0.1",
+    "pm2": "^4.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -30,5 +37,17 @@
     "@babel/register": "^7.0.0",
     "mocha": "^7.0.0",
     "nodemon": "^2.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

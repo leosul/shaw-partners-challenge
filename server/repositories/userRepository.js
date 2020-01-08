@@ -1,18 +1,38 @@
 import axios from 'axios'
 import config from './../config'
+import parse from '../utils/parseHeader'
 
 const getUsers = async () => {
     try {
-        const users = await axios.get(config.integrations.baseUrl + '/users')
+        //console.log(link)
+        const users = await axios.get(config.integrations.baseUrl + `/users`)
 
-        return users.data
+        return {
+            users: users.data,
+            link: parse(users.headers.link)
+        }
     } catch (error) {
         console.error('[REPO]', error)
         return true
     }
 }
 
-const getUserByUserName = async (login) => {
+const getUsersLink = async (link) => {
+    console.log(config.integrations.baseUrl + '/users?' + link)
+    try {
+        const users = await axios.get(config.integrations.baseUrl + '/users?' + link)
+
+        return {
+            users: users.data,
+            link: parse(users.headers.link)
+        }
+    } catch (error) {
+        console.error('[REPO]', error)
+        return true
+    }
+}
+
+const getUserByUserLogin = async (login) => {
     try {
         const user = await axios.get(config.integrations.baseUrl + `/users/${login}`)
 
@@ -36,6 +56,7 @@ const getUserRepositories = async (login) => {
 
 export const userRepository = {
     getUsers,
-    getUserByUserName,
-    getUserRepositories
+    getUserByUserLogin,
+    getUserRepositories,
+    getUsersLink
 }
