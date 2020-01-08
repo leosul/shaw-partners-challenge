@@ -7,6 +7,7 @@
     "server": "nodemon server/bin/index",
     "start": "node server/bin/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build",
     "startui": "react-scripts start"
   },
   "keywords": [],
