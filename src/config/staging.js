@@ -1,3 +1,3 @@
 module.exports = {
-    apiUrl: 'https://shaw-partners-challenge.herokuapp.com//api'
+    apiUrl: 'https://shaw-partners-challenge.herokuapp.com/api'
 }
