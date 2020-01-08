@@ -45,9 +45,12 @@ const getUserByUserLogin = async (login) => {
 
 const getUserRepositories = async (login) => {
     try {
-        const user = await axios.get(config.integrations.baseUrl + `/users/${login}/repos`)
+        const repo = await axios.get(config.integrations.baseUrl + `/users/${login}/repos`)
 
-        return user.data
+        console.log(config.integrations.baseUrl + `/users/${login}/repos`)
+        //console.log('runQuery', repo, JSON.stringify(repo.data))
+
+        return { repos: repo.data }
     } catch (error) {
         console.error('[REPO]', error)
         return true
