@@ -31,22 +31,22 @@ export default class Main extends Component {
         this.loadUsers()
     }
 
-    render() {
-        const { users } = this.state
+        render() {
+            const { users } = this.state
 
-        return (
-            <div className="user-list">
-                {users.map(user => (
-                    <article key={user.id}>
-                        <strong>{user.id + ' - ' + user.login}</strong>
-                        <Link to={`/users/${user.login}`}>Details</Link>
-                    </article>
-                ))}
-                <div className="actions">
-                    <button onClick={this.firsPage}>First</button>
-                    <button onClick={this.nextPage}>Next</button>
+            return (
+                <div className="user-list">
+                    {users.map(user => (
+                        <article key={user.id}>
+                            <strong>{user.id + ' - ' + user.login}</strong>
+                            <Link to={`/users/${user.login}`}>Details</Link>
+                        </article>
+                    ))}
+                    <div className="actions">
+                        <button onClick={this.firsPage}>First</button>
+                        <button onClick={this.nextPage}>Next</button>
+                    </div>
                 </div>
-            </div>
-        )
-    }
+            )
+        }
 }
